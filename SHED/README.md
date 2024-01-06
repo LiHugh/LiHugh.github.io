@@ -25,7 +25,8 @@ To validate the effectiveness of SHED, we conduct empirical experiments across v
 In UED, we train a student agent to perform well across a set of in-distribution and out-of-distribution environments. To accomplish this, UED utilizes a teacher agent that provides a sequence of environment parameter values and generates the corresponding environment to train the student to generalize well to unseen environment levels.
 
 ### 2.2 Diffusion model
-In a diffusion probabilistic model, we assume a $D$-dimensional random variable $x \in R^D$ with an unknown distribution $q_0(x_0)$. Diffusion Probabilistic model involves two Markov chains: a forward chain $\displaystyle q(x_t|x_{t-1})$ that perturbs data to noise, and a reverse chain that converts noise back to data. The forward chain is typically designed to transform any data distribution into a simple prior distribution (e.g., standard Gaussian) by considering perturb data with Gaussian noise of zero mean and $\beta_t$ variance for $T$ steps:    
+In a diffusion probabilistic model, we assume a $D$-dimensional random variable $x \in R^D$ with an unknown distribution $q_0(x_0)$. Diffusion Probabilistic model involves two Markov chains: a forward chain $\displaystyle q(x_t|x_{t-1})$ that perturbs data to noise, and a reverse chain that converts noise back to data. The forward chain is typically designed to transform any data distribution into a simple prior distribution (e.g., standard Gaussian) by considering perturb data with Gaussian noise of zero mean and $\beta_t$ variance for $T$ steps:   
+
 $$q(x_t|x_{t-1}) =  \mathcal{N} ( x_t ; \sqrt{1-\beta_t}x_{t-1} , \beta_t I) \quad q(x_{1:T}|x_{0}) = \Pi_{t=1}^T q(x_t|x_{t-1})$$
 
 
@@ -38,13 +39,13 @@ Specifically, our framework involves specifying the upper-level teacher policy, 
 
 ## 4. Experiment Domain
 ### 4.1 Evaluate the performance of the trajectory modelling
-<div align=center>  <img title="Lunar Lander" src="Figures/diffusion_1.PNG" width=22%>  <img title="Lunar Lander" src="Figures/diffusion_2.PNG" width=22%>  <img title="Lunar Lander" src="Figures/diffusion_3_1.PNG" width=22%>  <img title="Lunar Lander" src="Figures/diffusion_3_2.PNG" width=22%> </div>
+<div align=center>  <img title="Lunar Lander" src="./Figures/diffusion_1.PNG" width=22%>  <img title="Lunar Lander" src="./Figures/diffusion_2.PNG" width=22%>  <img title="Lunar Lander" src="./Figures/diffusion_3_1.PNG" width=22%>  <img title="Lunar Lander" src="./Figures/diffusion_3_2.PNG" width=22%> </div>
 
 ### 4.2 Two domains
 we present our experimental results in the domains of BipedalWalker, Lunar Lander to demonstrate the superior performance of our approach when a trained agent is transferred to new environments.
 
 
-<div align=center>  <img title="Lunar Lander" src="Figures/lander.PNG" width=45%>    <img title="BipedalWalker" src="Figures/walker.PNG" width=45%> </div>
+<div align=center>  <img title="Lunar Lander" src="./Figures/lander.PNG" width=45%>    <img title="BipedalWalker" src="./Figures/walker.PNG" width=45%> </div>
 
 
 
