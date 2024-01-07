@@ -45,7 +45,7 @@ Specifically, our framework involves specifying the upper-level teacher policy, 
 we present our experimental results in the domains of BipedalWalker, Lunar Lander to demonstrate the superior performance of our approach when a trained agent is transferred to new environments.
 
 
-<div align=center>  <img title="Lunar Lander" src="./Figures/lander.PNG" width=45%>    <img title="BipedalWalker" src="./Figures/walker.PNG" width=45%> </div>
+<div align=center>  <img title="Lunar Lander" src="./SHED/Figures/lander.PNG" width=45%>    <img title="BipedalWalker" src="./SHED/Figures/walker.PNG" width=45%> </div>
 
 
 
